@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop – Melt Me</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant&family=Jost&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header id="header" class="site-header">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+
+      <!-- LOGO -->
+      <a class="navbar-brand" href="index.html">
+        <img src="images/transparentLogo.png"
+             class="logo img-fluid"
+             alt="Melt Me"
+             style="max-height:20px;">
+      </a>
+
+      <!-- TOGGLER -->
+      <button class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- NAV LINKS + CART -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-center">
+
+          <!-- Standard Pages -->
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active" href="products.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
+          <!-- Cart Dropdown (immediately after nav links) -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="cartDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Cart (<span id="cart-count">0</span>)
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end p-3" aria-labelledby="cartDropdown" style="min-width:300px;">
+              <li class="d-flex justify-content-between mb-2">
+                <span>Your cart</span>
+                <span class="badge bg-dark" id="cart-badge">0</span>
+              </li>
+              <li>
+                <ul class="list-group mb-3" id="cart-items">
+                  <li class="list-group-item text-muted text-center">Your cart is empty</li>
+                </ul>
+              </li>
+              <li>
+                <a href="index.html" class="btn btn-dark w-100 mb-2">View Cart</a>
+                <a href="index.html" class="btn btn-primary w-100">Checkout</a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Optional: Search -->
+          <li class="nav-item my-2 my-lg-0">
+            <input type="search"
+                   class="form-control form-control-sm"
+                   placeholder="Search"
+                   aria-label="Search"
+                   style="width:180px;">
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+<!-- SHOP SECTION -->
+
+<section class="product-grid padding-medium pt-3 clearfix">
+  <div class="container">
+    <div class="row">
+
+
+      <div class="d-flex justify-content-center gap-3 py-4">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="single">Single Candles</button>
+        <button class="filter-btn" data-filter="set">Set Candles</button>
+      </div>
+
+      <div class="grid p-0 clearfix row g-4">
+
+        <!-- PRODUCT 1 -->
+        <div class="col-md-3 py-3 product-item all set">
+          <div class="image-holder position-relative px-3 text-center">
+            <a href="single-product.html">
+              <img src="images/goldenCandle.png" alt="The Golden Set" class="product-image img-fluid">
+            </a>
+            <h5 class="text-uppercase mt-3">The Golden Set</h5>
+            <p>$12.00</p>
+            <button class="btn btn-dark" onclick="addToCart('The Golden Set', 12)">Add to Cart</button>
+          </div>
+        </div>
+
+        <!-- PRODUCT 2 -->
+        <div class="col-md-3 py-3 product-item all set">
+          <div class="image-holder position-relative px-3 text-center">
+            <a href="single-product.html">
+              <img src="images/bubbledSpiral.png" alt="Bubbly Spiral Set" class="product-image img-fluid">
+            </a>
+            <h5 class="text-uppercase mt-3">Bubbly Set</h5>
+            <p>$9.00</p>
+            <button class="btn btn-dark" onclick="addToCart('Bubbly Spiral Set', 9)">Add to Cart</button>
+          </div>
+        </div>
+
+        <!-- PRODUCT 3 -->
+        <div class="col-md-3 py-3 product-item all single">
+          <div class="image-holder position-relative px-3 text-center">
+            <a href="single-product.html">
+              <img src="images/gradientBubble.png" alt="Gradient Bubbly" class="product-image img-fluid">
+            </a>
+            <h5 class="text-uppercase mt-3">Gradient Bubbly</h5>
+            <p>$9.00</p>
+            <button class="btn btn-dark" onclick="addToCart('Gradient Bubbly', 9)">Add to Cart</button>
+          </div>
+        </div>
+
+        <!-- PRODUCT 4 -->
+        <div class="col-md-3 py-3 product-item all set">
+          <div class="image-holder position-relative px-3 text-center">
+            <a href="single-product.html">
+              <img src="images/floralBouquet.png" alt="Floral Bouquet" class="product-image img-fluid">
+            </a>
+            <h5 class="text-uppercase mt-3">Floral Bouquet</h5>
+            <p>$35.00</p>
+            <button class="btn btn-dark" onclick="addToCart('Floral Bouquet', 35)">Add to Cart</button>
+          </div>
+        </div>
+
+        <!-- PRODUCT 5 -->
+        <div class="col-md-3 py-3 product-item all set">
+          <div class="image-holder position-relative px-3 text-center">
+            <a href="single-product.html">
+              <img src="images/floralSet.png" alt="Colorful Floral Set" class="product-image img-fluid">
+            </a>
+            <h5 class="text-uppercase mt-3">Colorful Set</h5>
+            <p>$49.00</p>
+            <button class="btn btn-dark" onclick="addToCart('Colorful Floral Set', 49)">Add to Cart</button>
+          </div>
+        </div>
+
+        <!-- PRODUCT 6 -->
+        <div class="col-md-3 py-3 product-item all single">
+          <div class="image-holder position-relative px-3 text-center">
+            <a href="single-product.html">
+              <img src="images/partyFavour.png" alt="Summer Party Favours" class="product-image img-fluid">
+            </a>
+            <h5 class="text-uppercase mt-3">Party Favours</h5>
+            <p>$4.00</p>
+            <button class="btn btn-dark" onclick="addToCart('Summer Party Favours', 4)">Add to Cart</button>
+          </div>
+        </div>
+
+        <!-- PRODUCT 7 -->
+        <div class="col-md-3 py-3 product-item all single">
+          <div class="image-holder position-relative px-3 text-center">
+            <a href="single-product.html">
+              <img src="images/smallFlowers.png" alt="Small Flowers" class="product-image img-fluid">
+            </a>
+            <h5 class="text-uppercase mt-3">Small Flowers</h5>
+            <p>$2.00</p>
+            <button class="btn btn-dark" onclick="addToCart('Small Flowers', 2)">Add to Cart</button>
+          </div>
+        </div>
+
+        <!-- PRODUCT 8 -->
+        <div class="col-md-3 py-3 product-item all single">
+          <div class="image-holder position-relative px-3 text-center">
+            <a href="single-product.html">
+              <img src="images/customNames.png" alt="Customizable Wax Melts" class="product-image img-fluid">
+            </a>
+            <h5 class="text-uppercase mt-3">Customizable</h5>
+            <p>$4.00</p>
+            <button class="btn btn-dark" onclick="addToCart('Customizable Wax Melts', 4)">Add to Cart</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- BACK BUTTON -->
+    <div class="text-center mt-3">
+      <a href="index.html" class="btn btn-outline-dark">← Back to Home</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="text-center py-4">
+  <p>&copy; 2026 Melt Me. All rights reserved.</p>
+</footer>
+
+<!-- SCRIPTS -->
+<script src="js/bootstrap.bundle.min.js"></script>
+
+<script>
+  // PRODUCT FILTER
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const products = document.querySelectorAll('.product-item');
+
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.dataset.filter;
+
+      filterButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      products.forEach(product => {
+        if (filter === 'all' || product.classList.contains(filter)) {
+          product.style.display = '';
+        } else {
+          product.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
+
+<script src="js/cart.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>
